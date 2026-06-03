@@ -1,0 +1,25 @@
+# Omitir configuración del editor/IDE
+compile_commands.json
+.clangd
+.cache
+.sublime-workspace
+.sublime-project
+.idea/
+.vscode/
+cmake-build-*/
+
+# Omitir binarios, outputs y archivos intermedios de compilación C++
+data/
+build/
+out/
+
+# Omitir archivos de compilación LaTeX
+*.pdf
+*.synctex*
+*.log
+*.aux
+*.fls
+*.fdb_latexmk
+
+# Omitir ambientes virtuales
+.venv/

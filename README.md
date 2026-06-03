@@ -13,7 +13,6 @@
 - GCC (>=13)
 - make
 - bash
-- wget
 
 ## Instrucciones
 

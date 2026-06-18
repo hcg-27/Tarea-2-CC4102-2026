@@ -75,5 +75,7 @@ int main() {
         std::cout << "W = " << W << " | Busquedas (M) = " << M << " | Tiempo Splay: " << t_bus_splay.count() << " ms\n";
     }
 
+    std::cout << "\n";
+
     return 0;
 }

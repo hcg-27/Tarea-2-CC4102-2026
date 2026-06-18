@@ -67,5 +67,7 @@ int main() {
         std::cout << "N=" << N << " | Splay Ins: " << t_ins_splay.count() << "ms | Splay Busq: " << t_bus_splay.count() << "ms\n";
     }
 
+    std::cout << "\n";
+
     return 0;
 }

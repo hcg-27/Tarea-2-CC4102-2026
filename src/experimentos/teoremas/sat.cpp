@@ -78,5 +78,7 @@ int main() {
         std::cout << "m = " << m << " (" << i << "%) | Tiempo Splay: " << t_bus_splay.count() << " ms\n";
     }
 
+    std::cout << "\n";
+
     return 0;
 }

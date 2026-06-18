@@ -46,6 +46,6 @@ int main() {
         generar_y_guardar(i, "data/dataset_" + std::to_string(i) + ".bin");
     }
     generar_y_guardar(25, "data/dataset_25.bin");
-    std::cout << "Listo.\n";
+    std::cout << "Listo.\n\n";
     return 0;
 }

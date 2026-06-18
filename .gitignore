@@ -7,6 +7,7 @@ compile_commands.json
 .idea/
 .vscode/
 cmake-build-*/
+=
 
 # Omitir binarios, outputs y archivos intermedios de compilación C++
 data/

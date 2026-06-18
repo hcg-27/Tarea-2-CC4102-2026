@@ -6,6 +6,7 @@ OUT_DIR = out
 DATA_DIR = data
 
 AVL_OBJ = $(BUILD_DIR)/avl.o
+SPLAY_OBJ = $(BUILD_DIR)/splay.o
 
 EXPERIMENTOS = $(OUT_DIR)/crear_datasets \
                $(OUT_DIR)/ia_bu $(OUT_DIR)/ia_bs \
@@ -31,25 +32,28 @@ setup:
 $(BUILD_DIR)/avl.o: src/arboles/avl.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(BUILD_DIR)/splay.o: src/arboles/splay.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(OUT_DIR)/crear_datasets: src/experimentos/base/crear_datasets.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-$(OUT_DIR)/ia_bu: src/experimentos/base/ia_bu.cpp $(AVL_OBJ)
+$(OUT_DIR)/ia_bu: src/experimentos/base/ia_bu.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(OUT_DIR)/ia_bs: src/experimentos/base/ia_bs.cpp $(AVL_OBJ)
+$(OUT_DIR)/ia_bs: src/experimentos/base/ia_bs.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(OUT_DIR)/io_bu: src/experimentos/base/io_bu.cpp $(AVL_OBJ)
+$(OUT_DIR)/io_bu: src/experimentos/base/io_bu.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(OUT_DIR)/io_bs: src/experimentos/base/io_bs.cpp $(AVL_OBJ)
+$(OUT_DIR)/io_bs: src/experimentos/base/io_bs.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(OUT_DIR)/sat: src/experimentos/teoremas/sat.cpp $(AVL_OBJ)
+$(OUT_DIR)/sat: src/experimentos/teoremas/sat.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(OUT_DIR)/wst: src/experimentos/teoremas/wst.cpp $(AVL_OBJ)
+$(OUT_DIR)/wst: src/experimentos/teoremas/wst.cpp $(AVL_OBJ) $(SPLAY_OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 # Run single target: make run TARGET=ia_bu

@@ -38,13 +38,14 @@ make build
 
 4. Ejecutar los experimentos
 ```bash
-make run
+make run_all
 ``` 
 
-El último comando:
+5. Ayuda
+```bash
+make help
+```
 
-- ...
-- ...
 
 ## Formato del output
 
